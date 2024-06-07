@@ -2,65 +2,50 @@ package main
 
 import "fmt"
 
+// const (
+// 	a = iota
+// 	b
+// 	c
+// )
+
+// const (
+// 	a2 = iota
+// )
+
+const (
+	_  = iota // ignore first value by assigning to blank identifier
+	KB = 1 << (iota * 10)
+	MB
+	GB
+	TB
+	PB
+	EB
+	ZB
+	YB
+)
+
 func main() {
+	// const myConst int = 42
+	// fmt.Printf("%v, %T\n", myConst, myConst)
 
-	// n := 1 == 1
-	// m := 1 == 2
-	// fmt.Printf("%v, %T\n", n, n)
-	// fmt.Printf("%v, %T\n", m, m)
+	// const a int = 14
+	// const b string = "foo"
+	// const c float32 = 3.14
+	// const d bool = true
+	// fmt.Printf("%v\n", a)
+	// fmt.Printf("%v\n", b)
+	// fmt.Printf("%v\n", c)
+	// fmt.Printf("%v\n", d)
 
-	// var n bool
-	// fmt.Printf("%v, %T\n", n, n)
+	// const a = 42
+	// var b int = 27
+	// fmt.Printf("%v, %T\n", a+b, a+b)
 
-	// a := 10 // 1010
-	// b := 3  // 0011
-	// fmt.Println(a + b)
-	// fmt.Println(a - b)
-	// fmt.Println(a * b)
-	// fmt.Println(a / b)
-	// fmt.Println(a % b)
-	// fmt.Println(a & b)  // 0010
-	// fmt.Println(a | b)  // 1011
-	// fmt.Println(a ^ b)  // 1001
-	// fmt.Println(a &^ b) // 0100
+	// fmt.Printf("%v\n", a)
+	// fmt.Printf("%v\n", b)
+	// fmt.Printf("%v\n", c)
+	// fmt.Printf("%v\n", a2)
 
-	// a := 8 						// 2^3
-	// fmt.Println(a << 3) // 2^3 * 2^3 = 2^6
-	// fmt.Println(a >> 3) // 2^3 / 2^3 = 2^0
-
-	// var n float64 = 3.14
-	// n = 13.7e72
-	// n = 2.1e14
-	// fmt.Printf("%v, %T\n", n, n)
-
-	// a := 10.2
-	// b := 3.7
-	// fmt.Println(a + b)
-	// fmt.Println(a - b)
-	// fmt.Println(a * b)
-	// fmt.Println(a / b)
-
-	// var n complex64 = 1 + 2i
-	// fmt.Printf("%v, %T\n", n, n)
-	// fmt.Printf("%v, %T\n", real(n), real(n))
-	// fmt.Printf("%v, %T\n", imag(n), imag(n))
-
-	// a := 1 + 2i
-	// b := 2 + 5.2i
-	// fmt.Println(a + b)
-	// fmt.Println(a - b)
-	// fmt.Println(a * b)
-	// fmt.Println(a / b)
-
-	// var n complex128 = complex(5, 12)
-	// fmt.Printf("%v, %T\n", n, n)
-
-	// s := "this is a string"
-	// b := []byte(s)
-	// fmt.Printf("%v, %T\n", s[2], s[2])
-	// fmt.Printf("%v, %T\n", b, b)
-
-	var r rune = 'a'
-	fmt.Printf("%v, %T\n", r, r)
-
+	fileSize := 4000000000.
+	fmt.Printf("%.2fGB\n", fileSize/GB)
 }
